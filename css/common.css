@@ -207,6 +207,7 @@ input[type="number"] {
   color: #2e2f42;
   outline: none;
 }
+
 [data-create] {
   border-radius: 8px;
   padding: 8px 16px;
