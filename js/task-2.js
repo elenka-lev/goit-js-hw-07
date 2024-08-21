@@ -27,10 +27,11 @@ const images = [
 
 function renderImages(imageArray) {
   const lists = document.querySelector('.gallery');
-  lists.innerHTML = '';
-  for (const img of imageArray) {
-    lists.insertAdjacentHTML('beforeend', `<li><img src="${img.url}" alt="${img.alt}"></li>`);
-  };
+  const galleryImages = imageArray
+    .map(({ url, alt }) => `<li><img src="${url}" alt="${alt}"></li>`)
+    .join('');
+  
+  lists.insertAdjacentHTML('beforeend', galleryImages);
 }
 
 renderImages(images);
